@@ -5,9 +5,10 @@ function sleep(duration) {
   while (new Date().getTime() < now + duration) {}
 }
 
-[1, 2, 3, 4, 5].forEach(function(n) {
-  sleep(n * 1000);
-  console.log(n);
+[5, 4, 3, 2, 1].forEach(function(n) {
+  setTimeout(function() {
+    console.log(n);
+  }, n * 1000);
 });
 
 console.log("end");
