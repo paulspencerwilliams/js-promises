@@ -1,14 +1,16 @@
 #! /usr/bin/env node
 
-function sleep(duration) {
-  var now = new Date().getTime();
-  while (new Date().getTime() < now + duration) {}
-}
-
-[5, 4, 3, 2, 1].forEach(function(n) {
-  setTimeout(function() {
-    console.log(n);
-  }, n * 1000);
+const promises = [5, 4, 3, 2, 1].map(function(n) {
+  return new Promise(function(resolve) {
+    setTimeout(resolve, n * 1000, n);
+  }).then(function(o) {
+    return new Promise(function(resolve) {
+      setTimeout(resolve, o * 1000, o * 2);
+    });
+  });
 });
 
-console.log("end");
+Promise.all(promises).then(function(v) {
+  console.log(v);
+  console.log("end");
+});
