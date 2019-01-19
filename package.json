@@ -6,5 +6,11 @@
   "repository": "http://github.com/paulspencerwilliams/js-promises",
   "author": "Paul Williams",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "prettier": "1.15.3"
+  },
+  "bin": {
+    "play": "./bin/play.js"
+  }
 }
