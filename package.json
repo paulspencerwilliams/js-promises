@@ -1,0 +1,10 @@
+{
+  "name": "js-promises",
+  "version": "0.0.1",
+  "description": "Playing with, to understand promises",
+  "main": "index.js",
+  "repository": "http://github.com/paulspencerwilliams/js-promises",
+  "author": "Paul Williams",
+  "license": "MIT",
+  "private": true
+}
