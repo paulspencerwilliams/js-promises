@@ -11,6 +11,11 @@
     "prettier": "1.15.3"
   },
   "bin": {
-    "play": "./bin/play.js"
+    "play": "./bin/play.js",
+    "server": "./bin/server.js"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   }
 }
